@@ -1,6 +1,6 @@
 import unittest
 
-from lazify import LazyProxy
+from lazify import LazyProxy, lazify
 
 
 class LazyProxyTestCase(unittest.TestCase):
@@ -53,3 +53,21 @@ class LazyProxyTestCase(unittest.TestCase):
         numbers.pop(0)
         self.assertEqual(2, proxy.value)
         self.assertEqual(1, proxy_deepcopy.value)
+
+
+class LazyTestCase(unittest.TestCase):
+
+    def test_cache(self):
+        numbers = [1, 2, 3]
+
+        @lazify
+        def first(xs):
+            return xs.pop(0)
+
+        proxy = first(numbers)
+        self.assertEqual(1, proxy.value)
+        self.assertEqual(1, proxy.value)
+
+        proxy = first(numbers, enable_cache=False)
+        self.assertEqual(2, proxy.value)
+        self.assertEqual(3, proxy.value)

@@ -1,3 +1,6 @@
+import functools
+
+
 class LazyProxy(object):
     """Class for proxy objects that delegate to a specified function to evaluate
     the actual object.
@@ -149,4 +152,34 @@ class LazyProxy(object):
         )
 
 
-__all__ = ["LazyProxy"]
+def lazify(func):
+    """Make the decorated function evaluation lazy.
+
+    The function will return a :py:class:`~LazyProxy` rather than the expected
+    result.
+
+    >>> @lazify
+    ... def greeting(name='world'):
+    ...     return 'Hello, %s!' % name
+    >>> lazy_greeting = greeting(name='Joe')
+    >>> lazy_greeting
+    <__main__.LazyProxy at 0x7f638b680598>
+    >>> print(lazy_greeting)
+    Hello, Joe!
+
+    Proxy cache can be controlled directly when calling the function:
+
+    >>> lazy_greeting = greeting(name='Joe', enable_cache=False)
+    >>> lazy_greeting._is_cache_enabled
+    False
+
+    Thus, the decorated function shouldn't have a ``enable_cache`` parameter.
+    """
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        return LazyProxy(func, *args, **kwargs)
+    return wrapper
+
+
+__all__ = ["LazyProxy", "lazify"]
