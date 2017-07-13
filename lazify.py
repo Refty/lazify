@@ -6,14 +6,14 @@ class LazyProxy(object):
     the actual object.
 
     >>> def greeting(name='world'):
-    ...     return 'Hello, %s!' % name
+    ...     return 'Hello, {}!'.format(name)
     >>> lazy_greeting = LazyProxy(greeting, name='Joe')
     >>> print(lazy_greeting)
     Hello, Joe!
-    >>> u'  ' + lazy_greeting
-    u'  Hello, Joe!'
-    >>> u'(%s)' % lazy_greeting
-    u'(Hello, Joe!)'
+    >>> '  ' + lazy_greeting
+    '  Hello, Joe!'
+    >>> '({})'.format(lazy_greeting)
+    '(Hello, Joe!)'
 
     This can be used, for example, to implement lazy translation functions that
     delay the actual translation until the string is actually used. The
@@ -160,7 +160,7 @@ def lazify(func):
 
     >>> @lazify
     ... def greeting(name='world'):
-    ...     return 'Hello, %s!' % name
+    ...     return 'Hello, {}!'.format(name)
     >>> lazy_greeting = greeting(name='Joe')
     >>> lazy_greeting
     <__main__.LazyProxy at 0x7f638b680598>
