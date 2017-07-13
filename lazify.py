@@ -182,4 +182,4 @@ def lazify(func):
     return wrapper
 
 
-__all__ = ["LazyProxy", "lazify"]
+__all__ = ['LazyProxy', 'lazify']
