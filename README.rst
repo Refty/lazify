@@ -1,5 +1,9 @@
 .. _Babel: https://github.com/python-babel/babel
 
+.. image:: https://raw.githubusercontent.com/numberly/lazify/master/logo.jpg
+    :alt: Lazify all the things!
+    :align: center
+
 ======
 Lazify
 ======
