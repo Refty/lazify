@@ -56,6 +56,9 @@ class LazyProxy(object):
             object.__setattr__(self, '_value', value)
         return self._value
 
+    def __bool__(self):
+        return bool(self.value)
+
     def __contains__(self, key):
         return key in self.value
 
