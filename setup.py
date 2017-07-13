@@ -8,7 +8,7 @@ def get_description():
 
 setup(
     name="Lazify",
-    version="0.2.0",
+    version="0.3.0",
     url="https://github.com/numberly/lazify",
     license="BSD",
     author="Guillaume Gelin",
