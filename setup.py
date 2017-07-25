@@ -16,8 +16,6 @@ setup(
     description="Lazify all the things!",
     long_description=get_description(),
     py_modules=["lazify"],
-    include_package_data=True,
-    zip_safe=False,
     platforms="any",
     classifiers=[
         "Intended Audience :: Developers",
