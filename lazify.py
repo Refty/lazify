@@ -59,6 +59,10 @@ class LazyProxy(object):
             object.__setattr__(self, '_is_value_cached', True)
         return value
 
+    @property
+    def __class__(self):
+        return self.value.__class__
+
     def __bool__(self):
         return bool(self.value)
 

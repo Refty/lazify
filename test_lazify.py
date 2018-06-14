@@ -54,6 +54,11 @@ class LazyProxyTestCase(unittest.TestCase):
         self.assertEqual(2, proxy.value)
         self.assertEqual(1, proxy_deepcopy.value)
 
+    def test_can_compare_type(self):
+        proxy = LazyProxy(lambda: {})
+        assert isinstance(proxy, dict)
+        assert isinstance(proxy, LazyProxy)
+
 
 class LazyTestCase(unittest.TestCase):
 
