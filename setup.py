@@ -9,10 +9,10 @@ def get_description():
 setup(
     name="Lazify",
     version="0.4.0",
-    url="https://github.com/numberly/lazify",
+    url="https://github.com/Refty/lazify",
     license="BSD",
     author="Guillaume Gelin",
-    author_email="ramnes@1000mercis.com",
+    author_email="guillaume@refty.co",
     description="Lazify all the things!",
     long_description=get_description(),
     py_modules=["lazify"],

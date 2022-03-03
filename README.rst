@@ -1,6 +1,6 @@
 .. _Babel: https://github.com/python-babel/babel
 
-.. image:: https://raw.githubusercontent.com/numberly/lazify/master/logo.jpg
+.. image:: https://raw.githubusercontent.com/Refty/lazify/master/img/logo.jpg
     :alt: Lazify all the things!
     :align: center
 
@@ -10,12 +10,12 @@ Lazify
 
 .. image:: https://img.shields.io/pypi/v/lazify.svg
    :target: https://pypi.python.org/pypi/Lazify
-.. image:: https://img.shields.io/github/license/numberly/lazify.svg
-   :target: https://github.com/numberly/lazify/blob/master/LICENSE
-.. image:: https://img.shields.io/travis/numberly/lazify.svg
-   :target: https://travis-ci.org/numberly/lazify
-.. image:: https://img.shields.io/coveralls/numberly/lazify.svg
-   :target: https://coveralls.io/github/numberly/lazify
+.. image:: https://img.shields.io/github/license/Refty/lazify.svg
+   :target: https://github.com/Refty/lazify/blob/master/LICENSE
+.. image:: https://img.shields.io/travis/Refty/lazify.svg
+   :target: https://travis-ci.org/Refty/lazify
+.. image:: https://img.shields.io/coveralls/Refty/lazify.svg
+   :target: https://coveralls.io/github/Refty/lazify
 
 |
 
@@ -32,6 +32,22 @@ Install
 .. code-block:: sh
 
    $ pip install lazify
+
+
+Sponsors
+========
+
+.. image:: https://raw.githubusercontent.com/Refty/lazify/master/img/numberly.png
+    :alt: Numberly
+    :align: center
+    :target: https://numberly.com/
+
+|
+
+.. image:: https://raw.githubusercontent.com/Refty/lazify/master/img/refty.png
+    :alt: Refty
+    :align: center
+    :target: https://refty.co/
 
 
 License
